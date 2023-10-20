@@ -15,8 +15,8 @@ export class LoginPageComponent {
   private router      = inject ( Router )
 
   public myForm: FormGroup = this.fb.group({
-    email:['orlando@google.com', [Validators.required, Validators.email ] ],
-    password:['123456',[ Validators.required, Validators.minLength( 6 ) ] ]
+    email:['', [Validators.required, Validators.email ] ],
+    password:['',[ Validators.required, Validators.minLength( 6 ) ] ]
   });
 
 
@@ -29,7 +29,6 @@ export class LoginPageComponent {
       error: ( message ) => {
         Swal.fire('Error', message, 'error')
       }
-
     }
 
     )
